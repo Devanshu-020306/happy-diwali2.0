@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Diwali — Festival Wishes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stage">
+    <header>
+      <div class="logo" aria-hidden>
+        <h1>🪔</h1>
+      </div>
+      <div>
+        <h2 class="title">Happy Diwali</h2>
+        <p class="subtitle">Light, music & wishes — share the festival vibes</p>
+      </div>
+    </header>
+
+    <div class="card grid">
+      <main class="greeting">
+        <h3 style="margin:0">Wishing you a sparkling Diwali!</h3>
+        <p class="lyrics">May your life be filled with lights, laughter and love. Open the player on the right to play Diwali songs. Replace the placeholder audio files with your own MP3s or use the YouTube embed option included below.</p>
+
+        <div class="diya-row" aria-hidden>
+          <div class="diya"> <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c1.657 0 3 1.343 3 3 0 .84-.352 1.598-.902 2.134C13.88 7.333 12.98 8 12 8s-1.88-.667-2.098-1.866C9.352 6.598 9 5.84 9 5c0-1.657 1.343-3 3-3z" fill="#fff" opacity="0.9"/></svg></div>
+          <div class="diya"> <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c1.657 0 3 1.343 3 3 0 .84-.352 1.598-.902 2.134C13.88 7.333 12.98 8 12 8s-1.88-.667-2.098-1.866C9.352 6.598 9 5.84 9 5c0-1.657 1.343-3 3-3z" fill="#fff" opacity="0.9"/></svg></div>
+          <div class="diya"> <svg viewBox="0 0 24 24" fill="none"><path d="M12 2c1.657 0 3 1.343 3 3 0 .84-.352 1.598-.902 2.134C13.88 7.333 12.98 8 12 8s-1.88-.667-2.098-1.866C9.352 6.598 9 5.84 9 5c0-1.657 1.343-3 3-3z" fill="#fff" opacity="0.9"/></svg></div>
+        </div>
+
+        <section style="margin-top:18px">
+          <h4 style="margin:0 0 8px 0">Message</h4>
+          <div style="background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;color:#eae6f5">Light a lamp, spread a smile. Share this page with family and friends to brighten their day. ✨</div>
+        </section>
+
+        <footer>Tip: Many browsers block autoplay. Click a play button to start music.</footer>
+      </main>
+
+      <aside class="art">
+        <div class="cover">
+          <div style="text-align:center">
+            <div style="font-size:20px;margin-bottom:8px">Happy Diwali Songs</div>
+            <small>Click a track to load and play</small>
+          </div>
+        </div>
+
+        <div class="card" style="padding:12px">
+          <div class="player" id="player">
+            <!-- Track 1: placeholder file -->
+            <div class="track" data-src="audio/happy_diwali_1.mp3">
+              <div class="meta">
+                <h4>Happy Diwali — Track 1</h4>
+                <p>Replace this file with your own MP3 (audio/happy_diwali_1.mp3)</p>
+              </div>
+              <div class="controls">
+                <button class="btn btn-load">Load</button>
+                <button class="btn btn-play">Play</button>
+              </div>
+            </div>
+
+            <!-- Track 2: placeholder file -->
+            <div class="track" data-src="audio/happy_diwali_2.mp3">
+              <div class="meta">
+                <h4>Happy Diwali — Track 2</h4>
+                <p>Use your own MP3 or point to a hosted file</p>
+              </div>
+              <div class="controls">
+                <button class="btn btn-load">Load</button>
+                <button class="btn btn-play">Play</button>
+              </div>
+            </div>
+
+            <!-- Track 3: YouTube embed option -->
+            <div class="track" data-src="youtube:Kxq8fY-placeholder">
+              <div class="meta">
+                <h4>YouTube: Happy Diwali (example)</h4>
+                <p>Click load to embed a YouTube player below (replace the video ID)</p>
+              </div>
+              <div class="controls">
+                <button class="btn btn-load">Load</button>
+                <button class="btn btn-play">Play</button>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+              <button id="pauseAll" class="btn">Pause</button>
+              <button id="stopAll" class="btn">Stop</button>
+              <label style="margin-left:auto;color:#cfcfd5">Volume</label>
+              <input id="volume" type="range" min="0" max="1" step="0.01" value="0.9" style="width:110px">
+            </div>
+
+            <div id="ytContainer" style="margin-top:12px;display:none"></div>
+          </div>
+        </div>
+
+        <div style="font-size:13px;color:#d8d6de">Made with ❤️ — Customize cover art, tracks, and messages. Save as <code>index.html</code> and create an <code>audio/</code> folder with your MP3 files named as in the tracks above, or change the data-src attributes to point to your hosted files.</div>
+      </aside>
+    </div>
+  </div>
+
+  <canvas class="fireworks" id="fw"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
